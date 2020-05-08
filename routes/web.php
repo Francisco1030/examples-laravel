@@ -8,4 +8,4 @@ Route::get('/', function () {
 
 Route::get('get-user', 'UserController@getAll');
 
-Route::get('users', 'Form\TestController@getAllUsers')->name('users.getAll');
+Route::get('users', 'Form\\TestController@getAllUsers')->name('users.getAll');
