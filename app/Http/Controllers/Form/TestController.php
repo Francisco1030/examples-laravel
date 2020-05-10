@@ -18,4 +18,10 @@ class TestController extends Controller
         ]);
 
     }
+
+    public function getUser(User $user) 
+    {
+        var_dump($user);
+
+    }
 }

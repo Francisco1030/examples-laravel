@@ -3,7 +3,7 @@
 ### 1.  Installation
 
 ```bash
-$ composer install
+composer install
 ```
 ------------
 
