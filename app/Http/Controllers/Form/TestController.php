@@ -38,4 +38,9 @@ class TestController extends Controller
        ]);
 
     }
+
+    public function createUser() 
+    {
+        return view('create-user');
+    }
 }
