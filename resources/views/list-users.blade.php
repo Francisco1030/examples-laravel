@@ -24,9 +24,14 @@
           <td>{{$user->id}}</td>
           <td>{{$user->name}}</td>
           <td>{{$user->email}}</td>
-          <td>  
-            <a class="waves-effect waves-teal btn-flat">Editar</a>
-            <a class="waves-effect waves-teal btn-flat">Deletar</a>
+          <td>
+            <form action="{{ route('users.deleteUser', ['user' => $user->id]) }}" method="POST">
+              @csrf
+              @method('delete')
+              <input type="hidden" name="user" value="{{ $user->id }}">
+              <a class="waves-effect waves-teal btn-flat" href="{{route('users.formEditUser', ['user' => $user->id])}}">Editar</a>
+              <button class="waves-effect waves-teal btn-flat" type="submit">Deletar</button>
+          </form>
           </td>
         </tr>
       </tbody>

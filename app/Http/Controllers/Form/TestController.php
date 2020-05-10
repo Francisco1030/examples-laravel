@@ -36,7 +36,7 @@ class TestController extends Controller
     public function editUser(User $user, Request $request)
     {
         $user->name = $request->name;
-        
+
         if(filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
             $user->email = $request->email;
         }
@@ -68,5 +68,11 @@ class TestController extends Controller
         return view('edit-user', [
             'user' => $user
        ]);
+    }
+
+    public function deleteUser(User $user)
+    {
+        $user->delete();
+        return redirect()->route('users.getAll');
     }
 }

@@ -19,3 +19,5 @@ Route::get('users/{user}', 'Form\\TestController@getUser')->name('users.getUser'
 Route::post('users/store', 'Form\\TestController@storeUser')->name('users.storeUser');
 
 Route::put('users/edit/{user}', 'Form\\TestController@editUser')->name('users.editUser');
+
+Route::delete('users/destroy/{user}', 'Form\\TestController@deleteUser')->name('users.deleteUser');
