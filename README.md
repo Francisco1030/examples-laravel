@@ -22,3 +22,8 @@ php artisan make:migration criar_tabela_alunos --create=aluno
 ```bash
 php artisan migrate
 ```
+
+###### Listar as rotas
+```shell
+php artisan route:list
+```
