@@ -32,6 +32,23 @@ class TestController extends Controller
         return redirect()->route('users.getAll');
     }
 
+    
+    public function editUser(User $user, Request $request)
+    {
+        $user->name = $request->name;
+        
+        if(filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
+            $user->email = $request->email;
+        }
+        if(!empty($request->password)) {
+            $user->password = Hash::make($request->password);
+        }
+        $user->save();
+
+        return redirect()->route('users.getAll');
+    }
+
+
     public function getUser(User $user) 
     {
        // var_dump($user);
@@ -41,8 +58,15 @@ class TestController extends Controller
 
     }
 
-    public function createUser() 
+    public function formCreateUser() 
     {
         return view('create-user');
+    }
+
+    public function formEditUser(User $user) 
+    {
+        return view('edit-user', [
+            'user' => $user
+       ]);
     }
 }
