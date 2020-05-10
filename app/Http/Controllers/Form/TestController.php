@@ -21,13 +21,15 @@ class TestController extends Controller
 
     }
 
-    public function create()
+    public function storeUser(Request $request)
     {
         $user = new User();
-        $user->name = "Costa Lima";
-        $user->email = "costal@gmail.com";
-        $user->password = Hash::make("123");
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
         $user->save();
+
+        return redirect()->route('users.getAll');
     }
 
     public function getUser(User $user) 

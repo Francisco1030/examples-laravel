@@ -10,7 +10,8 @@
     
     <div class="container">
     <div class="row">
-      <form class="col s12" action="" method="POST">
+      <form class="col s12" action="{{ route('users.storeUser') }}" method="POST">
+        @csrf
         <div class="row">
           <div class="input-field col s12">
             <input id="name" name="name" type="text" class="validate">
