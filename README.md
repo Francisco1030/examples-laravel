@@ -1,17 +1,24 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-## Installation
+### 1.  Installation
 
 ```bash
 $ composer install
 ```
+------------
 
-## Migrate
+#### 2.  Comandos Laravel
 
-```bash
-$ php artisan make:migration criar_tabela_alunos --create=aluno
+###### Executar Aplicação
+```shell
+php artisan serve
+```
+
+###### Criar Migrate
+```shell
+php artisan make:migration criar_tabela_alunos --create=aluno
 ```
 
 ```bash
-$ php artisan migrate
+php artisan migrate
 ```
