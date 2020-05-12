@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('get-user', 'UserController@getAll');
 
 Route::group(['namespace' => 'Form'], function () {

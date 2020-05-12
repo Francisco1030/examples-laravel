@@ -16,11 +16,16 @@ php artisan serve
 
 ###### Criar Migrate
 ```shell
-php artisan make:migration criar_tabela_alunos --create=aluno
+php artisan make:migration criar_tabela_alunos
 ```
 
 ```bash
 php artisan migrate
+```
+
+###### Utualizar Migrate
+```shell
+php artisan migrate:refresh
 ```
 
 ###### Listar as rotas
