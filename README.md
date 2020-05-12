@@ -37,6 +37,10 @@ php artisan make:controller PostController
 ```shell
 php artisan make:model Post
 ```
+###### Criar Model, Controller e Migrate
+```shell
+php artisan make:model Product -mcr
+```
 
 ###### Listar as rotas
 ```shell
