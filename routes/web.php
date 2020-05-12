@@ -10,6 +10,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('posts/new', 'PostController@showForm')->name('posts.showForm');
+
+Route::post('posts/store', 'PostController@createPost')->name('posts.createPost');
+
 Route::get('get-user', 'UserController@getAll');
 
 Route::group(['namespace' => 'Form'], function () {

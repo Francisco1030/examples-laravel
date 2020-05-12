@@ -28,6 +28,16 @@ php artisan migrate
 php artisan migrate:refresh
 ```
 
+###### Criar Controller
+```shell
+php artisan make:controller PostController
+```
+
+###### Criar Model
+```shell
+php artisan make:model Post
+```
+
 ###### Listar as rotas
 ```shell
 php artisan route:list
